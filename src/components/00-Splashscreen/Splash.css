@@ -1,0 +1,31 @@
+.languages {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.languages .linkbutton {
+  width: 95%;
+  background-color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  text-align: start;
+  border-bottom: 1px solid #cccccc;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.languages .linkbutton:last-child {
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+
+.languages .linkbutton:first-child {
+  padding-top: 0px;
+}

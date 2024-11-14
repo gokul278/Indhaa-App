@@ -1,0 +1,25 @@
+.tabname {
+  font-size: 10px;
+}
+
+.tabicons {
+  font-size: 25px;
+  width: 26px;
+  height: 26px;
+}
+
+.tab-selected .tabicons svg,
+.tab-selected .tabname ion-label {
+  color: #d90216;
+  /* Change to your preferred color */
+}
+
+.tabicons svg,
+.tabname ion-label {
+  color: #aaa;
+  /* Default color for inactive icons and labels */
+}
+
+.no-ripple {
+  --ion-ripple-effect: none;
+}

@@ -1,0 +1,22 @@
+
+.custom-input {
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    color: #000;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+  }
+  
+  .custom-input::placeholder {
+    color: #aaa; /* Customize the placeholder text color */
+  }
+  
+  .custom-input:focus {
+    border-color: #ff5001; /* Customize border color on focus */
+    outline: none; /* Removes the default outline */
+  }
+  

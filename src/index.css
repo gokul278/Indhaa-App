@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.toolbar-title-default .md .in-toolbar {
+  background-color: #d90216;
+}
+
+.action-sheet-title .sc-ion-action-sheet-ios {
+  font-size: x-large;
+  color: black;
+}
