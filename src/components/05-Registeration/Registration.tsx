@@ -156,11 +156,11 @@ const Registration = () => {
             }}
           >
             <div
-            onClick={()=>{
-              if(userInput.name && userInput.email){
-                history.push("/home");
-              }
-            }}
+              onClick={() => {
+                if (userInput.name && userInput.email) {
+                  history.push("/home");
+                }
+              }}
               style={{
                 background:
                   userInput.name && userInput.email ? "#d90216" : "#d3d3d3",
@@ -170,7 +170,7 @@ const Registration = () => {
                 borderRadius: "10px",
                 marginBottom: "20px",
                 color: "#fff",
-                fontSize: "20px",
+                fontSize: "16px",
                 fontWeight: "700",
                 display: "flex",
                 justifyContent: "center",

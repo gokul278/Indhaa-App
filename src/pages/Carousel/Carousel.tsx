@@ -7,7 +7,7 @@ import banner3 from "../../assests/images/03-Banner.jpeg";
 
 const CarouselImage = () => {
   return (
-    <div style={{ overflow: "hidden", borderRadius: "30px" }}>
+    <div style={{ overflow: "hidden", borderRadius: "20px" }}>
       <Carousel
         autoPlay
         infiniteLoop

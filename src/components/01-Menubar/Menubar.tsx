@@ -13,6 +13,7 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import "./Menubar.css";
+import { StatusBar, Style } from "@capacitor/status-bar";
 
 import { ellipse, square, triangle } from "ionicons/icons";
 import { useLocation } from "react-router";
@@ -25,7 +26,21 @@ import { FiUser } from "react-icons/fi";
 const Menubar = () => {
   const location = useLocation();
 
-  console.log(location.pathname);
+  const configureStatusBar = async () => {
+    const path = location.pathname;
+    let bgcolor = "#ffffff";
+    if (path === "/splash") {
+      bgcolor = "#d90216";
+    }
+    // Change the color (example: blue)
+    await StatusBar.setBackgroundColor({ color: bgcolor });
+
+    // Optional: Set the style (light or dark content)
+    await StatusBar.setStyle({ style: Style.Light });
+  };
+
+  // Call the function on app startup
+  configureStatusBar();
 
   return (
     <>

@@ -8,6 +8,7 @@ interface HotelCardProps {
   img: string[]; // Array of image URLs
   path: string;
   rating: string;
+  location: string;
 }
 
 const HotelCard: React.FC<{ data: HotelCardProps }> = ({ data }) => {
@@ -16,8 +17,8 @@ const HotelCard: React.FC<{ data: HotelCardProps }> = ({ data }) => {
       style={{
         width: "100%",
         height: "250px",
-        borderRadius: "30px",
-        marginBottom: "30px",
+        borderRadius: "20px",
+        marginBottom: "15px",
         boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
       }}
     >
@@ -62,7 +63,13 @@ const HotelCard: React.FC<{ data: HotelCardProps }> = ({ data }) => {
             alignItems: "center",
           }}
         >
-          <div style={{ fontSize: "16px", fontWeight: "900" }}>{data.name}</div>
+          <div style={{ fontSize: "14px", fontWeight: "900" }}>
+            {" "}
+            <div>{data.name}</div>{" "}
+            <div style={{ fontSize: "12px", color: "#ccc",marginTop:"1px" }}>
+              {data.location}
+            </div>
+          </div>
           <div
             style={{
               width: "50px",

@@ -10,10 +10,6 @@ import {
   setupIonicReact,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import { ellipse, square, triangle } from "ionicons/icons";
-import Tab1 from "./pages/Tab1";
-import Tab2 from "./pages/Tab2";
-import Tab3 from "./pages/Tab3";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -52,6 +48,16 @@ import OTP from "./components/04-OTP/OTP";
 import Registration from "./components/05-Registeration/Registration";
 import Home from "./components/11-Home/Home";
 import Profile from "./components/41-Profile/Profile";
+import Cart from "./components/31-Cart/Cart";
+import Chooselanguage from "./components/41-Profile/01-More/01-Chooselanguage/Chooselanguage";
+import About from "./components/41-Profile/01-More/02-About/About";
+import Terms from "./components/41-Profile/01-More/02-About/01-Terms/Terms";
+import License from "./components/41-Profile/01-More/02-About/02-License/License";
+import Open from "./components/41-Profile/01-More/02-About/03-Open/Open";
+import Activity from "./components/21-Actvity/Activity";
+import SendFeedback from "./components/41-Profile/01-More/03-SendFeedback/SendFeedback";
+import Settings from "./components/41-Profile/01-More/04-Settings/Settings";
+import CollectedCoupons from "./components/41-Profile/02-Coupons/01-CollectedCoupons/CollectedCoupons";
 // import Language from "./components/02-Language/Language";
 
 setupIonicReact();
@@ -68,19 +74,30 @@ const App: React.FC = () => {
             <Route exact path="/profile">
               <Profile />
             </Route>
-            <Route path="/tab3">
-              <Tab3 />
+            <Route path="/activity">
+              <Activity />
             </Route>
-
+            <Route path="/cart">
+              <Cart />
+            </Route>
             <Route exact path="/">
               <Redirect to="/splash" />
             </Route>
             <Route exact path="/splash">
               <Splash />
             </Route>
+            <Route exact path="/feedback">
+              <SendFeedback />
+            </Route>
+            <Route exact path="/settings">
+              <Settings />
+            </Route>
+            <Route exact path="/collectedcoupons">
+              <CollectedCoupons />
+            </Route>
             {/* <Route exact path="/map">
-              <Map />
-            </Route> */}
+            <Map />
+          </Route> */}
             <Route exact path="/login">
               <Login />
             </Route>
@@ -89,6 +106,21 @@ const App: React.FC = () => {
             </Route>
             <Route exact path="/register">
               <Registration />
+            </Route>
+            <Route exact path="/chooselanguage">
+              <Chooselanguage />
+            </Route>
+            <Route exact path="/about">
+              <About />
+            </Route>
+            <Route exact path="/terms">
+              <Terms />
+            </Route>
+            <Route exact path="/license">
+              <License />
+            </Route>
+            <Route exact path="/open">
+              <Open />
             </Route>
           </IonRouterOutlet>
           <Menubar />

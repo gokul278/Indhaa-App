@@ -1,0 +1,19 @@
+.AContainer {
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Para {
+  width: 100%;
+  
+}
+
+.Para p {
+  background: green;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}

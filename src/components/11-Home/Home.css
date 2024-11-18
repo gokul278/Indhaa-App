@@ -1,0 +1,38 @@
+.sortbtn {
+  /* width: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  /* font-weight: 800; */
+  border-radius: 5px;
+  /* padding: 2px; */
+  font-size: 12px;
+  text-transform: none;
+  --background: "#fff";
+  --color: "#000";
+}
+
+.custom-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.custom-radio-group .radio-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* .radio-item {
+  padding-top: 10px;
+  padding-bottom: 20px;
+} */
+
+.custom-radio-group ion-radio {
+  --color-checked: #d90216;
+  --background-checked: #d90216;
+  --border-color-checked: #d90216;
+}

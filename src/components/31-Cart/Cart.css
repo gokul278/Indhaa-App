@@ -1,0 +1,20 @@
+ion-segment {
+  --background: #f5f5f5;
+}
+
+ion-segment-button {
+  --background: #f5f5f5;
+  color: #666666;
+  font-size: 16px;
+  font-weight: 700; /* Default background */
+}
+
+ion-segment-button[aria-selected="true"] {
+  --background: red; /* Red background for the active tab */
+  --color: #ff0000; /* Red color for the active text */
+}
+
+.active-segment {
+  color: #d90216;
+  padding: 8px;
+}

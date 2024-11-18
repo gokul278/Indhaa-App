@@ -1,0 +1,205 @@
+/* Dark overlay background */
+.brand {
+  display: flex;
+  justify-content: center;
+  color: gray;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.coupon-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Style for the coupon card */
+.coupon-card {
+  max-width: 170px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style for the logo */
+.coupon-logo img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+/* Coupon details */
+.coupon-info h3 {
+  font-size: 12px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.coupon-info h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  margin: 5px 0;
+}
+
+.coupon-info p {
+  color: #888;
+  font-size: 12px;
+  margin: 5px 0 15px;
+}
+
+/* Footer link styling */
+.coupon-footer div {
+  font-size: 14px;
+  color: #d90216;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.coupon-footer a:hover {
+  text-decoration: underline;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow-y: auto;
+}
+
+/* Header with back and close buttons */
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 500px;
+  padding: 15px;
+  color: #fff;
+}
+
+.back-button,
+.close-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Brand heading */
+.brand {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Coupon card modal */
+.coupon-modal {
+  background-color: #fff;
+  color: #000;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.coupon-logo img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Coupon details section */
+.coupon-details {
+  background-color: #fff;
+  color: #000;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: left;
+}
+
+.coupon-details h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about,
+.terms p {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.description {
+  font-size: 14px;
+  margin: 5px 0 15px;
+  color: #555;
+}
+
+.coupon-code-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.coupon-code {
+  font-weight: bold;
+}
+
+.copy-button {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Claim button at the bottom */
+.claim-button {
+  width: 100%;
+  background-color: #d90216;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+ion-toast::part(container) {
+  background: #fff !important;
+  color: #000 !important;
+  border-radius: 10px !important;
+  text-align: center;
+}

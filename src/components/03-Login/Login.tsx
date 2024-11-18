@@ -114,7 +114,7 @@ const Login = () => {
                 marginTop: "3vh",
                 borderRadius: "10px",
                 color: "#fff",
-                fontSize: "20px",
+                fontSize: "16px",
                 fontWeight: "700",
                 display: "flex",
                 justifyContent: "center",

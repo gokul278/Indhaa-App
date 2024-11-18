@@ -16,18 +16,19 @@ import { PiAddressBook } from "react-icons/pi";
 import { LuBadgePercent } from "react-icons/lu";
 import { RiDiscountPercentFill } from "react-icons/ri";
 import { FaArrowLeft } from "react-icons/fa";
+import { useHistory } from "react-router";
 
 const Profile: React.FC = () => {
+  const history = useHistory();
   const options = [
-    { icon: <MdOutlineLanguage />, name: "Choose Language", path: "/language" },
-    { icon: <BsInfoCircle />, name: "About", path: "/language" },
-    { icon: <FaRegEdit />, name: "Send feedback", path: "/language" },
     {
-      icon: <IoAlertCircleOutline />,
-      name: "Report a safety emergency",
-      path: "/language",
+      icon: <MdOutlineLanguage />,
+      name: "Choose Language",
+      path: "/chooselanguage",
     },
-    { icon: <IoSettingsOutline />, name: "Settings", path: "/language" },
+    { icon: <BsInfoCircle />, name: "About", path: "/about" },
+    { icon: <FaRegEdit />, name: "Send feedback", path: "/feedback" },
+    { icon: <IoSettingsOutline />, name: "Settings", path: "/settings" },
     { icon: <IoMdLogOut />, name: "Log out", path: "/language" },
   ];
   const foods = [
@@ -36,12 +37,7 @@ const Profile: React.FC = () => {
     { icon: <PiAddressBook />, name: "Address book", path: "/language" },
   ];
   const coupons = [
-    { icon: <LuBadgePercent />, name: "Collected coupons", path: "/language" },
-    {
-      icon: <RiDiscountPercentFill />,
-      name: "Apply membership coupons",
-      path: "/language",
-    },
+    { icon: <LuBadgePercent />, name: "Collected coupons", path: "/collectedcoupons" },
   ];
 
   return (
@@ -168,7 +164,9 @@ const Profile: React.FC = () => {
                     Coupons
                   </p>
                   {coupons.map((coupon, index) => (
-                    <div className="option-item" key={index}>
+                    <div className="option-item" onClick={()=>{
+                      history.push(coupon.path)
+                    }} key={index}>
                       <div className="content1">
                         <span
                           style={{
@@ -223,7 +221,16 @@ const Profile: React.FC = () => {
                     More
                   </p>
                   {options.map((option, index) => (
-                    <div className="option-item" key={index}>
+                    <div
+                      className="option-item"
+                      onClick={() => {
+                        history.push(option.path, {
+                          direction: "forward",
+                          animation: "slide",
+                        });
+                      }}
+                      key={index}
+                    >
                       <div className="content1">
                         <span
                           style={{
