@@ -144,6 +144,12 @@ const Home = () => {
               <CiSearch style={{ color: "#aaa", fontSize: "25px" }} />
             </div>
             <input
+              onClick={() => {
+                history.push("/search", {
+                  direction: "forward",
+                  animation: "slide",
+                });
+              }}
               className="custom-input"
               style={{ width: "90%", height: "4vh" }}
               type="text"
@@ -183,6 +189,9 @@ const Home = () => {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
+              }}
+              onClick={() => {
+                history.push("/address");
               }}
             >
               <div style={{ display: "flex" }}>
@@ -326,12 +335,13 @@ const Home = () => {
               <IonContent className="ion-padding">
                 <div
                   style={{
-                    height: "60vh",
+                    height: "65vh",
                     overflow: "auto",
                   }}
                 >
-                  <div style={{ height: "52vh" }}>
+                  <div style={{ height: "57vh" }}>
                     <IonRadioGroup
+                      style={{ paddingTop: "10px" }}
                       value="relevance"
                       className="custom-radio-group"
                     >

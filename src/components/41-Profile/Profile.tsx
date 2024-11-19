@@ -32,19 +32,26 @@ const Profile: React.FC = () => {
     { icon: <IoMdLogOut />, name: "Log out", path: "/language" },
   ];
   const foods = [
-    { icon: <IoFastFoodOutline />, name: "Your orders", path: "/language" },
-    { icon: <IoIosHeartEmpty />, name: "Favorite orders", path: "/language" },
-    { icon: <PiAddressBook />, name: "Address book", path: "/language" },
+    { icon: <PiAddressBook />, name: "Address book", path: "/address" },
   ];
   const coupons = [
-    { icon: <LuBadgePercent />, name: "Collected coupons", path: "/collectedcoupons" },
+    {
+      icon: <LuBadgePercent />,
+      name: "Collected coupons",
+      path: "/collectedcoupons",
+    },
   ];
 
   return (
     <IonPage>
       <IonContent>
         <div style={{ width: "100%", height: "93vh" }}>
-          <div style={{ padding: "10px" }}>
+          <div
+            style={{ padding: "10px" }}
+            onClick={() => {
+              history.push("/account");
+            }}
+          >
             <div
               style={{
                 height: "20vh",
@@ -106,10 +113,19 @@ const Profile: React.FC = () => {
                       fontSize: "16px",
                     }}
                   >
-                    Food Orders
+                    Address Details
                   </p>
                   {foods.map((food, index) => (
-                    <div className="option-item" key={index}>
+                    <div
+                      className="option-item"
+                      onClick={() => {
+                        history.push(food.path, {
+                          direction: "forward",
+                          animation: "slide",
+                        });
+                      }}
+                      key={index}
+                    >
                       <div className="content1">
                         <span
                           style={{
@@ -164,9 +180,13 @@ const Profile: React.FC = () => {
                     Coupons
                   </p>
                   {coupons.map((coupon, index) => (
-                    <div className="option-item" onClick={()=>{
-                      history.push(coupon.path)
-                    }} key={index}>
+                    <div
+                      className="option-item"
+                      onClick={() => {
+                        history.push(coupon.path);
+                      }}
+                      key={index}
+                    >
                       <div className="content1">
                         <span
                           style={{

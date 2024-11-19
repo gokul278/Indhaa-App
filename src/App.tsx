@@ -58,6 +58,9 @@ import Activity from "./components/21-Actvity/Activity";
 import SendFeedback from "./components/41-Profile/01-More/03-SendFeedback/SendFeedback";
 import Settings from "./components/41-Profile/01-More/04-Settings/Settings";
 import CollectedCoupons from "./components/41-Profile/02-Coupons/01-CollectedCoupons/CollectedCoupons";
+import Address from "./components/41-Profile/03-AddressDetails/01-Address/Address";
+import Account from "./components/41-Profile/04-Account/Account";
+import Search from "./components/50-Search/Search";
 // import Language from "./components/02-Language/Language";
 
 setupIonicReact();
@@ -98,6 +101,15 @@ const App: React.FC = () => {
             {/* <Route exact path="/map">
             <Map />
           </Route> */}
+            <Route exact path="/address">
+              <Address />
+            </Route>
+            <Route exact path="/account">
+              <Account />
+            </Route>
+            <Route exact path="/search">
+              <Search />
+            </Route>
             <Route exact path="/login">
               <Login />
             </Route>
